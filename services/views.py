@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Job
+from django.views import generic
 
 
 def index(request):
@@ -14,3 +15,12 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+
+
+class JobListView(generic.ListView):
+    model = Job
+
+
+class JobDetailView(generic.DetailView):
+    model = Job
+
