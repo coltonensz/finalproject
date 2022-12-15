@@ -20,6 +20,7 @@ class Job(models.Model):
 class Contact(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=255)
+    """Sets limit on max length"""
     message = models.TextField()
 
     def __str__(self):
