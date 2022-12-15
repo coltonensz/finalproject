@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Job
 from django.views import generic
+from .forms import ContactForm
 
 
 def index(request):
@@ -23,4 +24,10 @@ class JobListView(generic.ListView):
 
 class JobDetailView(generic.DetailView):
     model = Job
+
+
+def contact_view(request):
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'contact.html', context)
 
