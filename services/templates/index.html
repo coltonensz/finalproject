@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>FHSU Internships Home</h1>
-  <p>Welcome to FHSU Internships page!</p>
-  <h2>Dynamic content</h2>
-  <p>The FHSU Incubator Internships offers the following services:</p>
-  <ul>
-    <li><strong>Jobs:</strong> {{ num_job }}</li>
-  </ul>
+  <section class="page-section clearfix">
+    <div class="container-fluid">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Welcome to the FHSU Internship website</span>
+                    </h2>
+                    <p class="mb-3">FHSU offers a number of IT internship services including, click here to view: </p>
+                    <div class="intro-button mx-auto">
+                        <a class="btn btn-primary btn-xl" href="{% url 'jobs' %}">All Services</a>
+                    </div>
+                </div>
+</section>
 {% endblock %}
