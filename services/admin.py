@@ -7,5 +7,7 @@ from .models import Contact
 class JobAdmin(admin.ModelAdmin):
     pass
 
+
 # admin.site.register(Job)
 admin.site.register(Contact)
+
